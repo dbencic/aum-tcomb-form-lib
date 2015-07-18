@@ -2,12 +2,9 @@
  * @jsx react.DOM
  */
 /**
- * Layout:
- * OccupationCalendar
- * - Filter
- * - Table
- * -- Edit anchor
- * - edit/create Widget
+ * Positive number type
+ * Email type
+ * Date type
  */
 var React = require('react');
 var t = require('tcomb-form');

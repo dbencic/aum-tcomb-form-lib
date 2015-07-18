@@ -1,0 +1,50 @@
+{
+  "name": "aum-tcomb-form-lib",
+  "title": "aum-tcomb-form-lib",
+  "description": "Auris Media tcomb form lib extension",
+  "version": "0.1.0",
+  "main": "Dragan Bencic, Auris Media d.o.o.",
+  "homepage": "http://aumcloud.com",
+  "author": {
+    "name": "Dragan Bencic",
+    "email": "dragan.bencic@gmail.com",
+    "url": "www.aum.hr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dbencic/aum-tcomb-form-lib.git"
+  },
+  "keywords": [
+    "javascript",
+    "tcomb",
+    "tcomb-form",
+    "tcomb-validation",
+    "browser",
+    "library",
+    "form",
+    "validation",
+    "generation",
+    "react",
+    "react-component"
+  ],
+  "peerDependencies": {
+  },
+  "dependencies": {
+    "tcomb-form": "^0.4.8",
+    "react-widgets": "^2.4.1"
+  },
+  "devDependencies": {
+    "browserify": "^6.3.2",
+    "reactify": "^1.1.0"
+  },
+  "tags": [
+    "form",
+    "validation",
+    "generation",
+    "react",
+    "react-component"
+  ],
+  "scripts": {
+    "buildjs": "browserify -t reactify index.js > index.bundle.dev.js"
+  }
+}

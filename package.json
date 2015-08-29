@@ -2,14 +2,15 @@
   "name": "aum-tcomb-form-lib",
   "title": "aum-tcomb-form-lib",
   "description": "Auris Media tcomb form lib extension",
-  "version": "0.1.0",
-  "main": "Dragan Bencic, Auris Media d.o.o.",
+  "version": "0.2.0",
+  "main": "index.js",
   "homepage": "http://aumcloud.com",
   "author": {
     "name": "Dragan Bencic",
     "email": "dragan.bencic@gmail.com",
     "url": "www.aum.hr"
   },
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/dbencic/aum-tcomb-form-lib.git"
@@ -27,15 +28,14 @@
     "react",
     "react-component"
   ],
-  "peerDependencies": {
-  },
+  "peerDependencies": {},
   "dependencies": {
     "tcomb-form": "^0.4.8",
     "react-widgets": "^2.4.1"
   },
   "devDependencies": {
-    "browserify": "^6.3.2",
-    "reactify": "^1.1.0"
+    "babelify": "^6.2.0",
+    "browserify": "^6.3.2"
   },
   "tags": [
     "form",
@@ -44,7 +44,12 @@
     "react",
     "react-component"
   ],
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
   "scripts": {
-    "buildjs": "browserify -t reactify index.js > index.bundle.dev.js"
+    "build:dev": "browserify index.js > dist/index.bundle.dev.js"
   }
 }

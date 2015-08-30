@@ -50,7 +50,7 @@ function dateTemplate(locals) {
   };
   var hasErrorClass = (locals.hasError)?"has-error":"";
   return (
-    <div className="dateTimePicker-form-group">
+    <div className="dateTimePicker-form-group form-group">
       {/* add a label if specified */}
       {locals.label ? <label className="control-label">{locals.label}</label> : null}
       <DateTimePicker 
@@ -91,14 +91,14 @@ var DateComponent = React.createClass({
   },
 
   // aggressive optimization (optional)
-  shouldComponentUpdate: function (nextProps, nextState) {
+  /*shouldComponentUpdate: function (nextProps, nextState) {
     return nextState.value !== this.state.value ||
       nextState.hasError !== this.state.hasError ||
       nextProps.value !== this.props.value ||
       nextProps.options !== this.props.options ||
-      nextProps.ctx.report.type !== this.props.ctx.report.type ||
+      nextProps.props.type !== this.props.type ||
       nextProps.onChange !== this.props.onChange;
-  },
+  },*/
 
   onChange: function (currDate, currDateStr) {
     this.setState({value: currDate}, function () {
@@ -106,10 +106,15 @@ var DateComponent = React.createClass({
     }.bind(this));
   },
 
-  getValue: function () {
+  validate: function() {
     var value = this.state.value;
-    var result = t.validate(value, this.props.ctx.report.type);
+    var result = t.validate(value, this.props.type);
     this.setState({hasError: !result.isValid()});
+    return result;
+  },
+
+  getValue: function () {
+    var result = this.validate();
     return result;
   },
 

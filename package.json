@@ -2,7 +2,7 @@
   "name": "aum-tcomb-form-lib",
   "title": "aum-tcomb-form-lib",
   "description": "Auris Media tcomb form lib extension",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "main": "index.js",
   "homepage": "http://aumcloud.com",
   "author": {
@@ -28,7 +28,9 @@
     "react",
     "react-component"
   ],
-  "peerDependencies": {},
+  "peerDependencies": {
+    "react": "^0.13.0"
+  },
   "dependencies": {
     "tcomb-form": "^0.6.3",
     "react-widgets": "^2.8.0"
@@ -50,6 +52,7 @@
     ]
   },
   "scripts": {
-    "build:dev": "browserify index.js > dist/index.bundle.dev.js"
+    "build:dev": "browserify index.js > dist/index.dev.js",
+    "build:demo": "browserify demo.js > dist/demo.dev.js"
   }
 }

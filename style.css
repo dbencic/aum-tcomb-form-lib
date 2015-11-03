@@ -1,0 +1,7 @@
+.rw-datetimepicker.has-error {
+	border-color: #a94442;
+}
+
+.dateTimePicker-form-group {
+	margin-bottom: 15px;
+}

@@ -64,7 +64,6 @@ function dateTemplate(locals) {
         style={style}
         className={hasErrorClass}
         disabled={locals.disabled}
-        min={new Date()} 
         headerFormat={"MM/yyyy"}
         footer={false} />
 

@@ -2,9 +2,9 @@
   "name": "aum-tcomb-form-lib",
   "title": "aum-tcomb-form-lib",
   "description": "Auris Media tcomb form lib extension",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "main": "index.js",
-  "homepage": "http://aumcloud.com",
+  "homepage": "https://github.com/dbencic/aum-tcomb-form-lib",
   "author": {
     "name": "Dragan Bencic",
     "email": "dragan.bencic@gmail.com",

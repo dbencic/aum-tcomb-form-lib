@@ -1,14 +1,18 @@
 /**
- * @jsx react.DOM
- */
-/**
  * Positive number type
  * Email type
  * Date type
  */
 var React = require('react');
+var ReactDOM = require('react-dom');
 var t = require('tcomb-form');
 var DateTimePicker = require('react-widgets/lib/DateTimePicker');
+var Moment = require('moment')
+var momentLocalizer = require('react-widgets/lib/localizers/moment')
+var numberLocalizer = require('react-widgets/lib/localizers/simple-number')
+
+numberLocalizer();
+momentLocalizer(Moment);
 
 var Form = t.form.Form;
 
@@ -55,7 +59,7 @@ function dateTemplate(locals) {
       {locals.label ? <label className="control-label">{locals.label}</label> : null}
       <DateTimePicker 
         defaultValue={locals.value}
-        format="dd.MM.yyyy"
+        format="DD.MM.YYYY"
         time={false}
         onChange={function (currDate, currDateStr) {
           locals.onChange(currDate, currDateStr);
@@ -64,7 +68,7 @@ function dateTemplate(locals) {
         style={style}
         className={hasErrorClass}
         disabled={locals.disabled}
-        headerFormat={"MM/yyyy"}
+        headerFormat={"MM/YYYY"}
         footer={false} />
 
       {/* add an error if specified */}
